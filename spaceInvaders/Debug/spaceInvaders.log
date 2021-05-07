@@ -1,0 +1,94 @@
+﻿Game.obj : warning LNK4075: не учитывается "/EDITANDCONTINUE" из-за спецификации "/INCREMENTAL:NO"
+sfml-graphics-s.lib(Color.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-graphics-s.lib(Color.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-graphics-s.lib(RenderTarget.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-graphics-s.lib(RenderTarget.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-graphics-s.lib(RenderWindow.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-graphics-s.lib(RenderWindow.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-graphics-s.lib(RenderStates.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-graphics-s.lib(RenderStates.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-graphics-s.lib(Transformable.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-graphics-s.lib(Transformable.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-graphics-s.lib(Image.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-graphics-s.lib(Image.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-graphics-s.lib(Texture.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-graphics-s.lib(Texture.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-graphics-s.lib(Sprite.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-graphics-s.lib(Sprite.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-graphics-s.lib(Transform.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-graphics-s.lib(Transform.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-graphics-s.lib(View.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-graphics-s.lib(View.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-graphics-s.lib(Shader.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-graphics-s.lib(Shader.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-graphics-s.lib(GLExtensions.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-graphics-s.lib(GLExtensions.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-graphics-s.lib(ImageLoader.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-graphics-s.lib(ImageLoader.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-graphics-s.lib(Glsl.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-graphics-s.lib(Glsl.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-window-s.lib(VideoMode.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-window-s.lib(VideoMode.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-window-s.lib(Window.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-window-s.lib(Window.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-window-s.lib(Context.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-window-s.lib(Context.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-window-s.lib(VideoModeImpl.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-window-s.lib(VideoModeImpl.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-window-s.lib(GlContext.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-window-s.lib(GlContext.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-window-s.lib(WindowImpl.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-window-s.lib(WindowImpl.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-window-s.lib(InputImpl.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-window-s.lib(InputImpl.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-window-s.lib(WglContext.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-window-s.lib(WglContext.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-window-s.lib(JoystickManager.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-window-s.lib(JoystickManager.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-window-s.lib(SensorManager.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-window-s.lib(SensorManager.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-window-s.lib(WindowImplWin32.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-window-s.lib(WindowImplWin32.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-window-s.lib(WglExtensions.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-window-s.lib(WglExtensions.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-window-s.lib(Joystick.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-window-s.lib(Joystick.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-window-s.lib(JoystickImpl.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-window-s.lib(JoystickImpl.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-system-s.lib(String.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-system-s.lib(String.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-system-s.lib(Err.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-system-s.lib(Err.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+sfml-system-s.lib(ThreadLocal.cpp.obj) : error LNK2038: обнаружено несоответствие для "_ITERATOR_DEBUG_LEVEL": значение "0" не соответствует значению "2" в Game.obj
+sfml-system-s.lib(ThreadLocal.cpp.obj) : error LNK2038: обнаружено несоответствие для "RuntimeLibrary": значение "MT_StaticRelease" не соответствует значению "MTd_StaticDebug" в Game.obj
+libcpmtd.lib(wlocale.obj) : error LNK2001: неразрешенный внешний символ __CrtDbgReport.
+libcpmtd.lib(xlocale.obj) : error LNK2001: неразрешенный внешний символ __CrtDbgReport.
+Game.obj : error LNK2001: неразрешенный внешний символ __CrtDbgReport.
+Player.obj : error LNK2001: неразрешенный внешний символ __CrtDbgReport.
+Source.obj : error LNK2001: неразрешенный внешний символ __CrtDbgReport.
+libcpmtd.lib(locale.obj) : error LNK2001: неразрешенный внешний символ __CrtDbgReport.
+libcpmtd.lib(xlocale.obj) : error LNK2001: неразрешенный внешний символ __free_dbg.
+libcpmtd.lib(xwcsxfrm.obj) : error LNK2001: неразрешенный внешний символ __free_dbg.
+libcpmtd.lib(StlCompareStringA.obj) : error LNK2001: неразрешенный внешний символ __free_dbg.
+libcpmtd.lib(locale0.obj) : error LNK2001: неразрешенный внешний символ __free_dbg.
+libcpmtd.lib(locale.obj) : error LNK2001: неразрешенный внешний символ __free_dbg.
+libcpmtd.lib(StlLCMapStringA.obj) : error LNK2001: неразрешенный внешний символ __free_dbg.
+libcpmtd.lib(wlocale.obj) : error LNK2001: неразрешенный внешний символ __free_dbg.
+libcpmtd.lib(xlocale.obj) : error LNK2001: неразрешенный внешний символ __malloc_dbg.
+libcpmtd.lib(xwcsxfrm.obj) : error LNK2001: неразрешенный внешний символ __malloc_dbg.
+libcpmtd.lib(StlCompareStringA.obj) : error LNK2001: неразрешенный внешний символ __malloc_dbg.
+libcpmtd.lib(locale0.obj) : error LNK2001: неразрешенный внешний символ __malloc_dbg.
+libcpmtd.lib(locale.obj) : error LNK2001: неразрешенный внешний символ __malloc_dbg.
+libcpmtd.lib(StlLCMapStringA.obj) : error LNK2001: неразрешенный внешний символ __malloc_dbg.
+libcpmtd.lib(wlocale.obj) : error LNK2001: неразрешенный внешний символ __malloc_dbg.
+libcpmtd.lib(_tolower.obj) : error LNK2019: ссылка на неразрешенный внешний символ __calloc_dbg в функции __Getctype.
+libcpmtd.lib(locale.obj) : error LNK2001: неразрешенный внешний символ __calloc_dbg.
+libcpmtd.lib(wlocale.obj) : error LNK2001: неразрешенный внешний символ __calloc_dbg.
+libcpmtd.lib(xlocale.obj) : error LNK2001: неразрешенный внешний символ __calloc_dbg.
+libcpmtd.lib(_tolower.obj) : error LNK2019: ссылка на неразрешенный внешний символ __wcsdup_dbg в функции __Getctype.
+libcpmtd.lib(xstrcoll.obj) : error LNK2001: неразрешенный внешний символ __wcsdup_dbg.
+libcpmtd.lib(xmbtowc.obj) : error LNK2019: ссылка на неразрешенный внешний символ __CrtDbgReportW в функции __Mbrtowc.
+libcpmtd.lib(StlLCMapStringA.obj) : error LNK2001: неразрешенный внешний символ __CrtDbgReportW.
+libcpmtd.lib(StlCompareStringA.obj) : error LNK2001: неразрешенный внешний символ __CrtDbgReportW.
+libcpmtd.lib(locale.obj) : error LNK2019: ссылка на неразрешенный внешний символ __realloc_dbg в функции "private: static void __cdecl std::locale::_Locimp::_Locimp_Addfac(class std::locale::_Locimp *,class std::locale::facet *,unsigned int)" (?_Locimp_Addfac@_Locimp@locale@std@@CAXPAV123@PAVfacet@23@I@Z).
+C:\Users\user\source\repos\spaceInvaders\Debug\spaceInvaders.exe : fatal error LNK1120: неразрешенных внешних элементов: 7
