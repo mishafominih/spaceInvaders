@@ -1,16 +1,17 @@
 #include "Game.h"
+#include <iostream>
+
+using namespace std;
 
 
 Timer::Timer(float time) {
+	index = Game::Instance->timers.size();
 	timer = 0;
 	this->time = time;
 	Game::Instance->timers.push_back(this);
-	index = Game::Instance->timers.size();
 }
 
-void Timer::Tick() {
-	float time = Game::Instance->clock.getElapsedTime().asMicroseconds();
-	time = time / 500;
+void Timer::Tick(float time) {
 	timer += time;
 }
 
@@ -20,10 +21,4 @@ bool Timer::IsTime() {
 
 void Timer::Restart() {
 	timer = 0;
-}
-
-void Timer::Del() {
-	auto iter = Game::Instance->timers.cbegin(); // указатель на первый элемент
-	Game::Instance->timers.erase(iter + index);   // удаляем третий элемент
-	delete this;
 }

@@ -20,6 +20,7 @@ public:
 	float x;
 	float y;
 	GameObject(String imagePath);
+	virtual ~GameObject();
 	virtual void Update() { }
 	virtual void Interspect(GameObject* obj) { }
 };
@@ -29,7 +30,7 @@ private:
 	void CreateEnemy();
 	void CheckInterspect();
 public:
-	Clock clock;
+	float time;
 	static Game* Instance;
 	vector<GameObject*> gameObjects;
 	vector<Timer*> timers;
@@ -39,36 +40,43 @@ public:
 	void CreateWall();
 	void AddGameObject(GameObject* obj);
 	void DelGameObject(GameObject* obj);
+	void AddTimer(Timer* timer);
+	void DelTimer(Timer* timer);
 };
 
 class Timer
 {
 	float time;
 	float timer;
-	float index;
 public:
+	float index;
 	Timer(float time);
-	void Tick();
+	void Tick(float time);
 	bool IsTime();
 	void Restart();
-	void Del();
 };
 
 class Player : public GameObject {
 private:
-	Timer shootTimer = Timer(0.5f);
+	Timer* shootTimer = new Timer(0.5);
 	float speed = 0.2f;
 public:
 	Player(int startX, int startY);
+	~Player();
 	virtual void Update() override;
 	virtual void Interspect(GameObject* obj) override;
 };
 
 class Enemy : public GameObject {
 private:
-
+	Timer* moveTimer = new Timer(0.25);
+	int radius = 100;
+	float speed = 1;
+	bool right = true;
+	int realX;
 public:
 	Enemy(int startX, int startY);
+	~Enemy();
 	virtual void Update() override;
 	virtual void Interspect(GameObject* obj) override;
 };

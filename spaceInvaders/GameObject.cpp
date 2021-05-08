@@ -9,3 +9,7 @@ GameObject::GameObject(String imagePath) {
 	texture.loadFromImage(image);
 	sprite.setTexture(texture);
 }
+
+GameObject::~GameObject()
+{
+}

@@ -10,10 +10,13 @@ Game::Game() {
 	AddGameObject(pl);
 	CreateEnemy();
 	CreateWall();
+	Clock clock;
 	while (window.isOpen())
 	{
+		time = clock.getElapsedTime().asSeconds();
+		clock.restart();
 		for (int i = 0; i < timers.size(); i++) {//итерация таймеров
-			timers[i]->Tick();
+			timers[i]->Tick(time);
 		}
 
 		for (int i = 0; i < gameObjects.size(); i++) {//обновление состояний игровых объектов
@@ -34,7 +37,6 @@ Game::Game() {
 			window.draw(gameObjects[i]->sprite);
 		}
 		window.display();
-		clock.restart();
 	}
 }
 
@@ -83,4 +85,20 @@ void Game::DelGameObject(GameObject* obj) {
 	}
 	gameObjects.erase(iter + obj->index);   // удаляем третий элемент
 	delete obj;
+}
+
+void Game::AddTimer(Timer* timer)
+{
+	timer->index = timers.size();
+	timers.push_back(timer);
+}
+
+void Game::DelTimer(Timer* timer)
+{
+	auto iter = timers.cbegin(); // указатель на удаляемый элемент
+	for (int i = timer->index + 1; i < timers.size(); i++) {
+		timers[i]->index--;
+	}
+	timers.erase(iter + timer->index);   // удаляем третий элемент
+	delete timer;
 }
