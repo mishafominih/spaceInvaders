@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include <time.h>
 #include "Game.h"
 
 Game* Game::Instance;
@@ -11,6 +12,8 @@ Game::Game() {
 	CreateEnemy();
 	CreateWall();
 	Clock clock;
+	srand(std::time(0));
+	auto life = new GameObject("Player.png");
 	while (window.isOpen())
 	{
 		time = clock.getElapsedTime().asSeconds();
@@ -36,8 +39,18 @@ Game::Game() {
 		for (int i = 0; i < gameObjects.size(); i++) {
 			window.draw(gameObjects[i]->sprite);
 		}
+		for (int i = 0; i < playerLives; i++) {
+			life->sprite.setPosition(WindowWidth - 300 + 75 * i, 0);
+			window.draw(life->sprite);
+		}
 		window.display();
+		if (exit) window.close();
 	}
+}
+
+void Game::Exit()
+{
+	exit = true;
 }
 
 void Game::CreateWall()
@@ -65,12 +78,16 @@ void Game::CheckInterspect()
 }
 
 void Game::CreateEnemy() {
-	auto enemy = new Enemy(WindowWidth / 2, WindowHeight - 400);
-	AddGameObject(enemy);
-	enemy = new Enemy(WindowWidth / 2 - 100, WindowHeight - 400);
-	AddGameObject(enemy);
-	enemy = new Enemy(WindowWidth / 2 + 100, WindowHeight - 400);
-	AddGameObject(enemy);
+	auto horizontalCount = 10;
+	auto verticalCount = 3;
+	for (int i = 0; i < horizontalCount; i++) {
+		for (int j = 0; j < verticalCount; j++) {
+			auto enemy = new Enemy(
+				WindowWidth / (horizontalCount + 1) * (i + 1),
+				(WindowHeight - 300) / (verticalCount + 1) * (j + 1));
+			AddGameObject(enemy);
+		}
+	}
 }
 
 void Game::AddGameObject(GameObject* obj) {

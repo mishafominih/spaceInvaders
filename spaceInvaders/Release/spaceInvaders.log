@@ -1,14 +1,55 @@
 ﻿  Enemy.cpp
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Game.h(75,36): warning C4305: аргумент: усечение из "double" в "float"
 C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Enemy.cpp(7,6): warning C4244: =: преобразование "int" в "float", возможна потеря данных
 C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Enemy.cpp(8,6): warning C4244: =: преобразование "int" в "float", возможна потеря данных
 C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Enemy.cpp(11,10): warning C4244: =: преобразование "float" в "int", возможна потеря данных
-C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Enemy.cpp(23,18): warning C4244: +=: преобразование "float" в "int", возможна потеря данных
-C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Enemy.cpp(27,18): warning C4244: -=: преобразование "float" в "int", возможна потеря данных
-C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Enemy.cpp(31,21): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Enemy.cpp(12,36): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Enemy.cpp(24,18): warning C4244: +=: преобразование "float" в "int", возможна потеря данных
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Enemy.cpp(28,18): warning C4244: -=: преобразование "float" в "int", возможна потеря данных
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Enemy.cpp(32,21): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Enemy.cpp(35,68): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+  Fire.cpp
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Game.h(75,36): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Fire.cpp(4,6): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Fire.cpp(5,6): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+  Game.cpp
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Game.h(75,36): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Game.cpp(15,17): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Game.cpp(21,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Game.cpp(25,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Game.cpp(39,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Game.cpp(43,47): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Game.cpp(67,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Game.cpp(68,25): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Game.cpp(100,33): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Game.cpp(109,28): warning C4244: =: преобразование "unsigned int" в "float", возможна потеря данных
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Game.cpp(116,13): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Game.cpp(116,35): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Game.cpp(119,27): warning C4244: аргумент: преобразование "float" в "const int", возможна потеря данных
+  GameObject.cpp
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Game.h(75,36): warning C4305: аргумент: усечение из "double" в "float"
+  Player.cpp
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Game.h(75,36): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Player.cpp(4,6): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Player.cpp(5,6): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Player.cpp(23,28): warning C4244: =: преобразование "T" в "float", возможна потеря данных
+          with
+          [
+              T=int
+          ]
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Player.cpp(28,51): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Player.cpp(28,44): warning C4244: аргумент: преобразование "float" в "int", возможна потеря данных
   Source.cpp
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Game.h(75,36): warning C4305: аргумент: усечение из "double" в "float"
+  Timer.cpp
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Game.h(75,36): warning C4305: аргумент: усечение из "double" в "float"
+  Wall.cpp
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Game.h(75,36): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Wall.cpp(4,6): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Wall.cpp(5,6): warning C4244: =: преобразование "int" в "float", возможна потеря данных
   Создание кода
-  73 of 205 functions (35.6%) were compiled, the rest were copied from previous compilation.
+  2 of 209 functions ( 1.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    15 functions had inline decision re-evaluated but remain unchanged
+    1 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено
   spaceInvaders.vcxproj -> C:\Users\user\source\repos\spaceInvaders\Release\spaceInvaders.exe

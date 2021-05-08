@@ -9,6 +9,7 @@ Enemy::Enemy(int startX, int startY) : GameObject("Enemy.png") {
 	sprite.setPosition(x, y);
 	type = Type::enemy;
 	realX = x;
+	shootTimer = new Timer(rand() % 4 + 3);
 }
 
 Enemy::~Enemy()
@@ -29,10 +30,16 @@ void Enemy::Update() {
 		moveTimer->Restart();
 	}
 	sprite.setPosition(realX, y);
+	if (shootTimer->IsTime()) {
+		auto rect = sprite.getTextureRect();
+		auto fire = new Fire(realX + rect.width / 2 - 3, y + rect.height + 5, 0.2f, -1, enemyFire);
+		Game::Instance->AddGameObject(fire);
+		shootTimer->Restart();
+	}
 }
 
 void Enemy::Interspect(GameObject* obj) {
-	if (obj->type == Type::fire) {
+	if (obj->type == Type::playerfire) {
 		Game::Instance->DelGameObject(this);
 		Game::Instance->DelGameObject(obj);
 	}

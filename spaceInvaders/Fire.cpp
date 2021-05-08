@@ -1,12 +1,12 @@
 #include "Game.h"
 
-Fire::Fire(int startX, int startY, float speed, int dir) : GameObject("Fire.png") {
+Fire::Fire(int startX, int startY, float speed, int dir, Type type) : GameObject("Fire.png") {
 	x = startX;
 	y = startY;
 	sprite.setPosition(x, y);
 	this->dir = dir;
 	this->speed = speed;
-	type = Type::fire;
+	this->type = type;
 }
 
 void Fire::Update() {
@@ -27,8 +27,7 @@ void Fire::Interspect(GameObject* obj)
 		Game::Instance->DelGameObject(this);
 	}
 	if (obj->type == Type::player) {
-		Game::Instance->DelGameObject(this);
-		Game::Instance->DelGameObject(obj);
+		obj->Interspect(this);
 	}
 }
 

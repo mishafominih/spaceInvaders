@@ -10,7 +10,7 @@ Wall::Wall(int startX, int startY) : GameObject("Wall.png") {
 
 void Wall::Interspect(GameObject* obj)
 {
-	if (obj->type == Type::fire) {
+	if (obj->type == Type::playerfire || obj->type == Type::enemyFire) {
 		Game::Instance->DelGameObject(obj);
 	}
 }

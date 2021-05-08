@@ -5,10 +5,9 @@ using namespace std;
 
 
 Timer::Timer(float time) {
-	index = Game::Instance->timers.size();
 	timer = 0;
 	this->time = time;
-	Game::Instance->timers.push_back(this);
+	Game::Instance->AddTimer(this);
 }
 
 void Timer::Tick(float time) {

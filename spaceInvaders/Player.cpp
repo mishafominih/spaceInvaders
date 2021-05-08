@@ -25,7 +25,7 @@ void Player::Update() {
 	if (shootTimer->IsTime()) {
 		if (Keyboard::isKeyPressed(Keyboard::W)) {
 			auto rect = sprite.getTextureRect();
-			auto fire = new Fire(x + rect.width / 2 - 3, y - rect.height, 0.2f, 1);
+			auto fire = new Fire(x + rect.width / 2 - 3, y - rect.height, 0.2f, 1, playerfire);
 			Game::Instance->AddGameObject(fire);
 			shootTimer->Restart();
 		}
@@ -35,8 +35,11 @@ void Player::Update() {
 
 void Player::Interspect(GameObject* obj)
 {
-	if (obj->type == Type::fire) {
-		Game::Instance->DelGameObject(this);
+	if (obj->type == Type::enemyFire) {
 		Game::Instance->DelGameObject(obj);
+		Game::Instance->playerLives--;
+		if (Game::Instance->playerLives == 0) {
+			Game::Instance->Exit();
+		}
 	}
 }

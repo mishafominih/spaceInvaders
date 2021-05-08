@@ -8,7 +8,7 @@ class Timer;
 using namespace std;
 using namespace sf;
 
-enum Type { player, fire, enemy, wall };
+enum Type { player, playerfire, enemyFire, enemy, wall, nothing};
 
 class GameObject {
 public:
@@ -29,6 +29,7 @@ class Game {
 private:
 	void CreateEnemy();
 	void CheckInterspect();
+	bool exit = false;
 public:
 	float time;
 	static Game* Instance;
@@ -37,6 +38,8 @@ public:
 	int WindowWidth = 1000;
 	int WindowHeight = 650;
 	Game();
+	int playerLives = 3;
+	void Exit();
 	void CreateWall();
 	void AddGameObject(GameObject* obj);
 	void DelGameObject(GameObject* obj);
@@ -58,7 +61,7 @@ public:
 
 class Player : public GameObject {
 private:
-	Timer* shootTimer = new Timer(0.5);
+	Timer* shootTimer = new Timer(0.25);
 	float speed = 0.2f;
 public:
 	Player(int startX, int startY);
@@ -69,7 +72,8 @@ public:
 
 class Enemy : public GameObject {
 private:
-	Timer* moveTimer = new Timer(0.25);
+	Timer* moveTimer = new Timer(0.05);
+	Timer* shootTimer;
 	int radius = 100;
 	float speed = 1;
 	bool right = true;
@@ -86,7 +90,7 @@ private:
 	float speed = 0.2f;
 	int dir;
 public:
-	Fire(int startX, int startY, float speed, int dir);
+	Fire(int startX, int startY, float speed, int dir, Type type);
 	virtual void Update() override;
 	virtual void Interspect(GameObject* obj) override;
 };
