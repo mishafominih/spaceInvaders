@@ -1,0 +1,6 @@
+﻿  pch.cpp
+  Function.cpp
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Game.h(81,37): warning C4305: аргумент: усечение из "double" в "float"
+     Создается библиотека C:\Users\user\source\repos\spaceInvaders\Debug\Function.lib и объект C:\Users\user\source\repos\spaceInvaders\Debug\Function.exp
+Function.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: __thiscall Function::Player::Player(int,int)" (??0Player@Function@@QAE@HH@Z) в функции "public: void __thiscall Function::Function::endGame(void)" (?endGame@Function@1@QAEXXZ).
+C:\Users\user\source\repos\spaceInvaders\Debug\Function.dll : fatal error LNK1120: неразрешенных внешних элементов: 1

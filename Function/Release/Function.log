@@ -1,9 +1,5 @@
-﻿  pch.cpp
-  Function.cpp
-C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Game.h(79,36): warning C4305: аргумент: усечение из "double" в "float"
+﻿  Function.cpp
+C:\Users\user\source\repos\spaceInvaders\spaceInvaders\Game.h(81,37): warning C4305: аргумент: усечение из "double" в "float"
      Создается библиотека C:\Users\user\source\repos\spaceInvaders\Release\Function.lib и объект C:\Users\user\source\repos\spaceInvaders\Release\Function.exp
-  Создание кода
-  Previous IPDB not found, fall back to full compilation.
-  All 476 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Создание кода завершено
-  Function.vcxproj -> C:\Users\user\source\repos\spaceInvaders\Release\Function.dll
+Function.obj : error LNK2001: неразрешенный внешний символ "public: __thiscall Function::Game::Game(float,bool)" (??0Game@Function@@QAE@M_N@Z).
+C:\Users\user\source\repos\spaceInvaders\Release\Function.dll : fatal error LNK1120: неразрешенных внешних элементов: 1
