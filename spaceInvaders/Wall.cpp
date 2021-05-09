@@ -4,7 +4,7 @@ Wall::Wall(int startX, int startY) : GameObject("Wall.png") {
 	x = startX;
 	y = startY;
 	sprite.setPosition(x, y);
-	type = Type::enemy;
+	type = Type::wall;
 }
 
 

@@ -7,9 +7,9 @@ Enemy::Enemy(int startX, int startY) : GameObject("Enemy.png") {
 	x = startX;
 	y = startY;
 	sprite.setPosition(x, y);
-	type = Type::enemy;
+	type = GAME_H::Type::enemy;
 	realX = x;
-	shootTimer = new Timer(rand() % 4 + 3);
+	shootTimer = new Timer(rand() % 4 + 3 - Game::Instance->speedShoot);
 }
 
 Enemy::~Enemy()

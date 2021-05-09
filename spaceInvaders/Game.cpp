@@ -1,19 +1,36 @@
 #include <SFML/Graphics.hpp>
 #include <time.h>
 #include "Game.h"
+#include <iostream>
+
+using namespace std;
+
 
 Game* Game::Instance;
+Result Game::result;
 
-Game::Game() {
+Game::Game(float speedShoot) {
+	if (speedShoot >= 3) {
+		cout << "Вы выиграли!!!" << endl;
+		Exit(exite);
+	}
+	this->speedShoot = speedShoot;
 	Instance = this;
 	RenderWindow window(sf::VideoMode(WindowWidth, WindowHeight), "battle city 2");
 	auto pl = new Player(WindowWidth / 2, WindowHeight - 100);
 	AddGameObject(pl);
 	CreateEnemy();
+		
 	CreateWall();
 	Clock clock;
 	srand(std::time(0));
 	auto life = new GameObject("Player.png");
+
+	Font font = Font();
+	font.loadFromFile("CyrilicOld.ttf");
+
+	Text lives = Text("Lives:", font, 25);
+	lives.setPosition(WindowWidth - 400, 25);
 	while (window.isOpen())
 	{
 		time = clock.getElapsedTime().asSeconds();
@@ -31,10 +48,20 @@ Game::Game() {
 		sf::Event event;
 		while (window.pollEvent(event))
 		{
-			if (event.type == sf::Event::Closed)
-				window.close();
+			if (event.type == sf::Event::Closed) {
+				Exit(Result::exite);
+			}
 		}
 		window.clear();
+
+		int count = 0;
+		for (int i = 0; i < gameObjects.size(); i++) {
+			if (gameObjects[i]->type == Type::enemy) {
+				count++;
+			}
+		}
+		if (count == 0)
+			Exit(win);
 
 		for (int i = 0; i < gameObjects.size(); i++) {
 			window.draw(gameObjects[i]->sprite);
@@ -43,13 +70,22 @@ Game::Game() {
 			life->sprite.setPosition(WindowWidth - 300 + 75 * i, 0);
 			window.draw(life->sprite);
 		}
+		window.draw(lives);
 		window.display();
-		if (exit) window.close();
+		if (exit) {
+			window.close();
+		}
 	}
 }
 
-void Game::Exit()
+void Game::CheckBots()
 {
+
+}
+
+void Game::Exit(Result res)
+{
+	result = res;
 	exit = true;
 }
 

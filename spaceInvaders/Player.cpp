@@ -39,7 +39,7 @@ void Player::Interspect(GameObject* obj)
 		Game::Instance->DelGameObject(obj);
 		Game::Instance->playerLives--;
 		if (Game::Instance->playerLives == 0) {
-			Game::Instance->Exit();
+			Game::Instance->Exit(lose);
 		}
 	}
 }

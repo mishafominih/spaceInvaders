@@ -9,6 +9,7 @@ using namespace std;
 using namespace sf;
 
 enum Type { player, playerfire, enemyFire, enemy, wall, nothing};
+enum Result { win, lose, exite };
 
 class GameObject {
 public:
@@ -31,15 +32,18 @@ private:
 	void CheckInterspect();
 	bool exit = false;
 public:
+	static Result result;
 	float time;
+	float speedShoot;
 	static Game* Instance;
 	vector<GameObject*> gameObjects;
 	vector<Timer*> timers;
 	int WindowWidth = 1000;
 	int WindowHeight = 650;
-	Game();
+	Game(float speedShoot);
+	void CheckBots();
 	int playerLives = 3;
-	void Exit();
+	void Exit(Result res);
 	void CreateWall();
 	void AddGameObject(GameObject* obj);
 	void DelGameObject(GameObject* obj);
