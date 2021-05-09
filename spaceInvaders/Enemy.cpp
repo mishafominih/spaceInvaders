@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "Game.h"
 #include <iostream>
 
@@ -21,11 +22,11 @@ namespace Function {
 		if (moveTimer->IsTime()) {
 			if (right) {
 				if (startX + radius <= x) right = false;
-				x += speed;
+				x += speed * Game::Instance->time * 1400;
 			}
 			else {
 				if (startX - radius >= x) right = true;
-				x -= speed;
+				x -= speed * Game::Instance->time * 1400;
 			}
 			moveTimer->Restart();
 		}

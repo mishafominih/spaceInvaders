@@ -1,6 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include "pch.h"
 #include <SFML/Graphics.hpp>
 #include <vector>
 namespace Function {
@@ -28,11 +29,12 @@ namespace Function {
 	};
 
 	class Game {
-	private:
+	protected:
 		void CreateEnemy();
 		void CheckInterspect();
 		void CreateWall();
 		void SetPlayer(bool isPlayer);
+		Game();
 		bool exit = false;
 	public:
 		static Result result;
@@ -68,7 +70,7 @@ namespace Function {
 	class Player : public GameObject {
 	protected:
 		Timer* shootTimer = new Timer(0.25);
-		float speed = 0.2f;
+		float speed = 0.15f;
 	public:
 		Player(int startX, int startY);
 		~Player();
@@ -81,7 +83,7 @@ namespace Function {
 		Timer* moveTimer = new Timer(0.05);
 		Timer* shootTimer;
 		int radius = 100;
-		float speed = 1;
+		float speed = 0.6;
 		bool right = true;
 		int startX;
 	public:

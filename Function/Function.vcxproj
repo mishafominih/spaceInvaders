@@ -160,25 +160,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Computer.cpp" />
-    <ClCompile Include="Enemy.cpp" />
-    <ClCompile Include="Fire.cpp" />
+    <ClCompile Include="..\spaceInvaders\Computer.cpp" />
+    <ClCompile Include="..\spaceInvaders\Enemy.cpp" />
+    <ClCompile Include="..\spaceInvaders\Fire.cpp" />
+    <ClCompile Include="..\spaceInvaders\Game.cpp" />
+    <ClCompile Include="..\spaceInvaders\GameObject.cpp" />
+    <ClCompile Include="..\spaceInvaders\Player.cpp" />
+    <ClCompile Include="..\spaceInvaders\Timer.cpp" />
+    <ClCompile Include="..\spaceInvaders\Wall.cpp" />
     <ClCompile Include="Function.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="Source.cpp" />
-    <ClCompile Include="Timer.cpp" />
-    <ClCompile Include="Wall.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game.h" />
+    <ClInclude Include="..\spaceInvaders\Game.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>

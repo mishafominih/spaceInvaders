@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "Game.h"
 namespace Function {
 	Fire::Fire(int startX, int startY, float speed, int dir, Type type) : GameObject("Fire.png") {
@@ -10,7 +11,7 @@ namespace Function {
 	}
 
 	void Fire::Update() {
-		y -= speed * dir;
+		y -= speed * dir * Game::Instance->time * 1400;
 		if (y < 0 || y > Game::Instance->WindowHeight) {
 			Game::Instance->DelGameObject(this);
 		}

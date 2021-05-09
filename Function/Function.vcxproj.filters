@@ -21,40 +21,37 @@
     <ClCompile Include="pch.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="..\spaceInvaders\Computer.cpp">
+      <Filter>Файлы ресурсов</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="..\spaceInvaders\Enemy.cpp">
+      <Filter>Файлы ресурсов</Filter>
     </ClCompile>
-    <ClCompile Include="Source.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="..\spaceInvaders\Fire.cpp">
+      <Filter>Файлы ресурсов</Filter>
     </ClCompile>
-    <ClCompile Include="Timer.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="..\spaceInvaders\Game.cpp">
+      <Filter>Файлы ресурсов</Filter>
     </ClCompile>
-    <ClCompile Include="Wall.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="..\spaceInvaders\GameObject.cpp">
+      <Filter>Файлы ресурсов</Filter>
     </ClCompile>
-    <ClCompile Include="Computer.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="..\spaceInvaders\Player.cpp">
+      <Filter>Файлы ресурсов</Filter>
     </ClCompile>
-    <ClCompile Include="Enemy.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="..\spaceInvaders\Timer.cpp">
+      <Filter>Файлы ресурсов</Filter>
     </ClCompile>
-    <ClCompile Include="Fire.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="..\spaceInvaders\Wall.cpp">
+      <Filter>Файлы ресурсов</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="..\spaceInvaders\Game.h">
+      <Filter>Файлы ресурсов</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

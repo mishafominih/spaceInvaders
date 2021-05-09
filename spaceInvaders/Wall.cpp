@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "Game.h"
 namespace Function {
 	Wall::Wall(int startX, int startY) : GameObject("Wall.png") {

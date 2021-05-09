@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "Game.h"
 namespace Function {
 	GameObject::GameObject(String imagePath) {
@@ -12,5 +13,6 @@ namespace Function {
 
 	GameObject::~GameObject()
 	{
+
 	}
 }

@@ -1,3 +1,4 @@
+#include "pch.h"
 #include "Game.h"
 namespace Function {
 	Player::Player(int startX, int startY) : GameObject("Player.png") {
@@ -14,11 +15,11 @@ namespace Function {
 
 	void Player::Update() {
 		if (Keyboard::isKeyPressed(Keyboard::A)) {
-			x -= speed;
+			x -= speed * Game::Instance->time * 1400;
 			if (x < 0) x = 0;
 		}
 		if (Keyboard::isKeyPressed(Keyboard::D)) {
-			x += speed;
+			x += speed * Game::Instance->time * 1400;
 			auto rightBorder = Game::Instance->WindowWidth - sprite.getTextureRect().width;
 			if (x > rightBorder) x = rightBorder;
 		}

@@ -1,4 +1,6 @@
+#include "pch.h"
 #include "Game.h"
+
 namespace Function {
 	Computer::Computer(int startX, int startY) : Player(startX, startY) {
 
@@ -58,14 +60,14 @@ namespace Function {
 
 	void Computer::right()
 	{
-		x += speed;
+		x += speed * Game::Instance->time * 1400;
 		auto rightBorder = Game::Instance->WindowWidth - sprite.getTextureRect().width;
 		if (x > rightBorder) x = rightBorder;
 	}
 
 	void Computer::left()
 	{
-		x -= speed;
+		x -= speed * Game::Instance->time * 1400;
 		if (x < 0) x = 0;
 	}
 }

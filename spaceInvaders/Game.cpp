@@ -1,3 +1,4 @@
+#include "pch.h"
 #include <SFML/Graphics.hpp>
 #include <time.h>
 #include "Game.h"
@@ -86,6 +87,10 @@ namespace Function {
 		else
 			player = new Computer(WindowWidth / 2, WindowHeight - 100);
 		AddGameObject(player);
+	}
+
+	Game::Game()
+	{
 	}
 
 	void Game::CheckBots()
