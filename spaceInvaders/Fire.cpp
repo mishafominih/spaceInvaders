@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "Game.h"
-namespace Function {
+
+namespace SpaceInvaiders {
 	Fire::Fire(int startX, int startY, float speed, int dir, Type type) : GameObject("Fire.png") {
 		x = startX;
 		y = startY;
@@ -11,7 +12,7 @@ namespace Function {
 	}
 
 	void Fire::Update() {
-		y -= speed * dir * Game::Instance->time * 1400;
+		y -= speed * dir * Game::Instance->GetTime();
 		if (y < 0 || y > Game::Instance->WindowHeight) {
 			Game::Instance->DelGameObject(this);
 		}
@@ -20,15 +21,7 @@ namespace Function {
 
 	void Fire::Interspect(GameObject* obj)
 	{
-		if (obj->type == Type::enemy) {
-			Game::Instance->DelGameObject(this);
-			Game::Instance->DelGameObject(obj);
-		}
-		if (obj->type == Type::wall) {
-			Game::Instance->DelGameObject(this);
-		}
-		if (obj->type == Type::player) {
+		if(obj->type != playerfire && obj->type != enemyFire)
 			obj->Interspect(this);
-		}
 	}
 }

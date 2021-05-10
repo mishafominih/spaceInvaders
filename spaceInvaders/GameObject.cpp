@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "Game.h"
-namespace Function {
+namespace SpaceInvaiders {
+
 	GameObject::GameObject(String imagePath) {
 		image.loadFromFile("Images/" + imagePath);
 		for (int i = 240; i < 256; i++)

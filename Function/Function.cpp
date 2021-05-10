@@ -3,6 +3,7 @@
 #include "../spaceInvaders/Game.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+using namespace SpaceInvaiders;
 
 namespace Function
 {
@@ -25,6 +26,9 @@ namespace Function
 
 			CheckInterspect();
 
+		}
+		virtual float GetTime() override{
+			return 10;
 		}
 	};
 

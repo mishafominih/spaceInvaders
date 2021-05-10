@@ -2,7 +2,7 @@
 #include <iostream>
 
 using namespace std;
-using namespace Function;
+using namespace SpaceInvaiders;
 
 int main() {
 	setlocale(0, "");

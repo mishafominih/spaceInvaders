@@ -5,7 +5,7 @@
 #include <iostream>
 
 using namespace std;
-namespace Function {
+namespace SpaceInvaiders {
 
 	Game* Game::Instance;
 	Result Game::result;
@@ -14,10 +14,11 @@ namespace Function {
 		if (speedShoot >= 3) {
 			cout << "You Win!!!" << endl;
 			Exit(exite);
+			return;
 		}
 		this->speedShoot = speedShoot;
 		Instance = this;
-		RenderWindow window(sf::VideoMode(WindowWidth, WindowHeight), "battle city 2");
+		RenderWindow window(sf::VideoMode(WindowWidth, WindowHeight), "Space Invaiders");
 
 		SetPlayer(isPlayer);
 		CreateEnemy();
@@ -32,19 +33,19 @@ namespace Function {
 
 		Text lives = Text("Lives:", font, 25);
 		lives.setPosition(WindowWidth - 400, 25);
-		while (window.isOpen())
+		while (window.isOpen())//основной игровой цикл
 		{
 			time = clock.getElapsedTime().asSeconds();
 			clock.restart();
-			for (int i = 0; i < timers.size(); i++) {//итерация таймеров
-				timers[i]->Tick(time);
+			for (auto timer : timers) {//итерация таймеров
+				timer->Tick(time);
 			}
 
 			for (int i = 0; i < gameObjects.size(); i++) {//обновление состояний игровых объектов
 				gameObjects[i]->Update();
 			}
 
-			CheckInterspect();
+			CheckInterspect();//проверка столкновений
 
 			sf::Event event;
 			while (window.pollEvent(event))
@@ -55,19 +56,12 @@ namespace Function {
 			}
 			window.clear();
 
-			int count = 0;
-			for (int i = 0; i < gameObjects.size(); i++) {
-				if (gameObjects[i]->type == Type::enemy) {
-					count++;
-				}
-			}
-			if (count == 0)
-				Exit(win);
+			CheckPlayerWin();
 
-			for (int i = 0; i < gameObjects.size(); i++) {
-				window.draw(gameObjects[i]->sprite);
+			for (auto obj : gameObjects) {//отрисовка всех игровых объектов
+				window.draw(obj->sprite);
 			}
-			for (int i = 0; i < playerLives; i++) {
+			for (int i = 0; i < playerLives; i++) {//отрисовка пользовательского интерфейса(жизней)
 				life->sprite.setPosition(WindowWidth - 300 + 75 * i, 0);
 				window.draw(life->sprite);
 			}
@@ -79,23 +73,28 @@ namespace Function {
 		}
 	}
 
+	void Game::CheckPlayerWin()
+	{
+		int count = 0;
+		for (auto obj : gameObjects) {
+			if (obj->type == Type::enemy) {
+				count++;
+			}
+		}
+		if (count == 0)
+			Exit(win);
+	}
+
 	void Game::SetPlayer(bool isPlayer)
 	{
-		GameObject* player = nullptr;
 		if (isPlayer)
-			player = new Player(WindowWidth / 2, WindowHeight - 100);
+			AddGameObject(new Player(WindowWidth / 2, WindowHeight - 100));
 		else
-			player = new Computer(WindowWidth / 2, WindowHeight - 100);
-		AddGameObject(player);
+			AddGameObject(new Computer(100, WindowHeight - 100));
 	}
 
 	Game::Game()
 	{
-	}
-
-	void Game::CheckBots()
-	{
-
 	}
 
 	void Game::Exit(Result res)
@@ -122,7 +121,6 @@ namespace Function {
 				auto interspect = first->sprite.getGlobalBounds().intersects(second->sprite.getGlobalBounds());
 				if (interspect) {
 					first->Interspect(second);
-					//second->Interspect(first);
 				}
 			}
 		}
@@ -169,5 +167,10 @@ namespace Function {
 		}
 		timers.erase(iter + timer->index);   // удаляем третий элемент
 		delete timer;
+	}
+
+	float Game::GetTime()
+	{
+		return time * 1400;
 	}
 }

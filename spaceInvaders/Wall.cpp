@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "Game.h"
-namespace Function {
+namespace SpaceInvaiders {
 	Wall::Wall(int startX, int startY) : GameObject("Wall.png") {
 		x = startX;
 		y = startY;

@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "Game.h"
-namespace Function {
+namespace SpaceInvaiders {
 	Player::Player(int startX, int startY) : GameObject("Player.png") {
 		x = startX;
 		y = startY;
@@ -15,23 +15,38 @@ namespace Function {
 
 	void Player::Update() {
 		if (Keyboard::isKeyPressed(Keyboard::A)) {
-			x -= speed * Game::Instance->time * 1400;
-			if (x < 0) x = 0;
+			left();
 		}
 		if (Keyboard::isKeyPressed(Keyboard::D)) {
-			x += speed * Game::Instance->time * 1400;
-			auto rightBorder = Game::Instance->WindowWidth - sprite.getTextureRect().width;
-			if (x > rightBorder) x = rightBorder;
+			right();
 		}
 		if (shootTimer->IsTime()) {
 			if (Keyboard::isKeyPressed(Keyboard::W)) {
-				auto rect = sprite.getTextureRect();
-				auto fire = new Fire(x + rect.width / 2 - 3, y - rect.height, 0.2f, 1, playerfire);
-				Game::Instance->AddGameObject(fire);
-				shootTimer->Restart();
+				fire();
 			}
 		}
 		sprite.setPosition(x, y);
+	}
+
+	void Player::fire()
+	{
+		auto rect = sprite.getTextureRect();
+		auto fire = new Fire(x + rect.width / 2 - 3, y - rect.height, 0.2f, 1, playerfire);
+		Game::Instance->AddGameObject(fire);
+		shootTimer->Restart();
+	}
+
+	void Player::right()
+	{
+		x += speed * Game::Instance->GetTime();
+		auto rightBorder = Game::Instance->WindowWidth - sprite.getTextureRect().width;
+		if (x > rightBorder) x = rightBorder;
+	}
+
+	void Player::left()
+	{
+		x -= speed * Game::Instance->GetTime();
+		if (x < 0) x = 0;
 	}
 
 	void Player::Interspect(GameObject* obj)

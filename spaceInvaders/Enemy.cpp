@@ -3,7 +3,7 @@
 #include <iostream>
 
 using namespace std;
-namespace Function {
+namespace SpaceInvaiders {
 	Enemy::Enemy(int startX, int startY) : GameObject("Enemy.png") {
 		x = startX;
 		y = startY;
@@ -15,20 +15,17 @@ namespace Function {
 
 	Enemy::~Enemy()
 	{
-		Game::Instance->DelTimer(moveTimer);
+		Game::Instance->DelTimer(shootTimer);
 	}
 
 	void Enemy::Update() {
-		if (moveTimer->IsTime()) {
-			if (right) {
-				if (startX + radius <= x) right = false;
-				x += speed * Game::Instance->time * 1400;
-			}
-			else {
-				if (startX - radius >= x) right = true;
-				x -= speed * Game::Instance->time * 1400;
-			}
-			moveTimer->Restart();
+		if (right) {
+			x += speed * Game::Instance->GetTime();
+			if (startX + radius <= x) right = false;
+		}
+		else {
+			x -= speed * Game::Instance->GetTime();
+			if (startX - radius >= x) right = true;
 		}
 		sprite.setPosition(x, y);
 		if (shootTimer->IsTime()) {

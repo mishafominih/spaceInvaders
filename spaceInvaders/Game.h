@@ -4,7 +4,7 @@
 #include "pch.h"
 #include <SFML/Graphics.hpp>
 #include <vector>
-namespace Function {
+namespace SpaceInvaiders {
 	class Fire;
 	class Timer;
 	using namespace std;
@@ -13,7 +13,7 @@ namespace Function {
 	enum Type { player, playerfire, enemyFire, enemy, wall, nothing };
 	enum Result { win, lose, exite };
 
-	class GameObject {
+	class GameObject {//базовый класс, который наследуют все игровые объекты
 	public:
 		Type type;
 		int index;
@@ -37,22 +37,23 @@ namespace Function {
 		Game();
 		bool exit = false;
 	public:
-		static Result result;
+		static Result result;//исход игры
 		float time;
 		float speedShoot;
-		static Game* Instance;
-		vector<GameObject*> gameObjects;
+		static Game* Instance;//ссылка на объект
+		vector<GameObject*> gameObjects;//список всех игровых объектов, дл€ которых обновл€етс€ логика и провер€ютс€ столкновени€
 		vector<Timer*> timers;
 		int WindowWidth = 1000;
 		int WindowHeight = 650;
 		Game(float speedShoot, bool isPlayer);
-		void CheckBots();
+		void CheckPlayerWin();
 		int playerLives = 3;
-		void Exit(Result res);
-		void AddGameObject(GameObject* obj);
+		void Exit(Result res);//выход
+		void AddGameObject(GameObject* obj);//регистраци€ игрового объекта
 		void DelGameObject(GameObject* obj);
-		void AddTimer(Timer* timer);
+		void AddTimer(Timer* timer);//регистраци€ таймера
 		void DelTimer(Timer* timer);
+		virtual float GetTime();
 	};
 
 	class Timer
@@ -75,15 +76,17 @@ namespace Function {
 		Player(int startX, int startY);
 		~Player();
 		virtual void Update() override;
+		void fire();
+		void right();
+		void left();
 		virtual void Interspect(GameObject* obj) override;
 	};
 
 	class Enemy : public GameObject {
 	private:
-		Timer* moveTimer = new Timer(0.05);
 		Timer* shootTimer;
 		int radius = 100;
-		float speed = 0.6;
+		float speed = 0.015;
 		bool right = true;
 		int startX;
 	public:
@@ -111,14 +114,13 @@ namespace Function {
 
 	class Computer : public Player {
 	private:
-		bool isFireOnLine(float first, float second);
+		bool isFireOnLine(float first, float second, int fireVisible);
+		int fireY = 175;//границы в пределах которых бот видит снар€ды
+		int fireX = 85;
 	public:
 		Computer(int startX, int startY);
 		virtual void Update() override;
 		void movePlayer();
-		void fire();
-		void right();
-		void left();
 	};
 }
 #endif

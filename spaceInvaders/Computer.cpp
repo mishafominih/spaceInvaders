@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "Game.h"
 
-namespace Function {
+namespace SpaceInvaiders {
 	Computer::Computer(int startX, int startY) : Player(startX, startY) {
 
 	}
@@ -9,7 +9,6 @@ namespace Function {
 	void Computer::Update()
 	{
 		movePlayer();
-
 
 		if (shootTimer->IsTime()) {
 			fire();
@@ -29,7 +28,7 @@ namespace Function {
 		}
 		for (auto fire : Game::Instance->gameObjects) {
 			if (fire->type == Type::enemyFire) {
-				if (isFireOnLine(fire->x, x) && abs(y - fire->y) < 150) {//если на предполагаемой линии снаряд
+				if (isFireOnLine(fire->x, x, fireX) && isFireOnLine(fire->y, y, fireY)) {//если на предполагаемой линии снаряд
 					left();
 					return;
 				}
@@ -45,29 +44,8 @@ namespace Function {
 		}
 	}
 
-	bool Computer::isFireOnLine(float first, float second) {
+	bool Computer::isFireOnLine(float first, float second, int fireVisible) {
 		auto sub = abs(first - second);
-		return sub <= 75;
-	}
-
-	void Computer::fire()
-	{
-		auto rect = sprite.getTextureRect();
-		auto fire = new Fire(x + rect.width / 2 - 3, y - rect.height, 0.2f, 1, playerfire);
-		Game::Instance->AddGameObject(fire);
-		shootTimer->Restart();
-	}
-
-	void Computer::right()
-	{
-		x += speed * Game::Instance->time * 1400;
-		auto rightBorder = Game::Instance->WindowWidth - sprite.getTextureRect().width;
-		if (x > rightBorder) x = rightBorder;
-	}
-
-	void Computer::left()
-	{
-		x -= speed * Game::Instance->time * 1400;
-		if (x < 0) x = 0;
+		return sub <= fireVisible;
 	}
 }

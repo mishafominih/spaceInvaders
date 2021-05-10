@@ -3,7 +3,7 @@
 #include <iostream>
 
 using namespace std;
-namespace Function {
+namespace SpaceInvaiders {
 
 	Timer::Timer(float time) {
 		timer = 0;
